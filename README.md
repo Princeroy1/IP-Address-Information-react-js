@@ -1,3 +1,17 @@
+# IP Adress inforamtion tracker 
+
+
+## Features
+  -input ip address and see information location data of ip adress 
+
+
+## Display view 1
+ ![pic1](ip1.png)
+
+## Display view 2
+ ![pic1](ip2.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

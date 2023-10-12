@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+import './App.css'
+import Api from './api';
 
-function App() {
+const App = () => {
+  const [ipadress,setIpadress]=useState('')
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="container">
+    
+    <div className="row height-100 d-flex justify-content-center align-items-center">
+        
+        <div className="col-md-8">
+            
+            <div className="search position-relative">
+                <input className="form-control" value={ipadress} onChange={(e)=>{
+                   setIpadress(e.target.value)
+  
+                }} placeholder="IP Adress" />
+                
+                <Api ip={ipadress} />
+            </div>
+            
+        </div>
+        
     </div>
+    
+</div>
+    </>
   );
 }
 
